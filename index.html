@@ -1,236 +1,400 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Jobs in Pakistan — Advertise & Useful Links</title>
-  <meta name="description" content="Advertise on our Jobs in Pakistan page. Get a dofollow backlink and reach job seekers across Pakistan." />
-  <meta property="og:title" content="Jobs in Pakistan — Advertise & Useful Links" />
-  <meta property="og:description" content="Advertise on our Jobs in Pakistan page. Get a dofollow backlink and reach job seekers across Pakistan." />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧾</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jobz.pk - Your Ultimate Job Portal in Pakistan. Find Government Jobs, Private Jobs, Army Vacancies, IT Jobs, and more.">
+    <title>Jobz.pk - Best Jobs in Pakistan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;family=Inter:wght@400;500&amp;display=swap');
+        
+        :root {
+            --primary: #2563eb;
+            --dark: #1e2937;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        
+        .nav {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .hero {
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .hero p {
+            font-size: 1.35rem;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            color: #64748b;
+        }
+        
+        .search-bar {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            background: white;
+            border-radius: 9999px;
+            padding: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+        }
+        
+        .search-bar input {
+            flex: 1;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
+            outline: none;
+        }
+        
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+        
+        .categories {
+            max-width: 1280px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            margin-bottom: 3rem;
+            color: var(--dark);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .card-header {
+            height: 140px;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .card-content {
+            padding: 1.75rem;
+        }
+        
+        .card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+        
+        .card p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .link {
+            display: flex;
+            align-items: center;
+            padding: 0.85rem 1.25rem;
+            background: #f8fafc;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #334155;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .link:hover {
+            background: #eff6ff;
+            color: var(--primary);
+            transform: translateX(6px);
+        }
+        
+        footer {
+            background: #1e2937;
+            color: #cbd5e1;
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="24" height="24" rx="4" fill="#0b66c2"/>
-          <path d="M6 8h12v2H6zM6 12h12v2H6z" fill="#fff"/>
-        </svg>
-        <span>Jobs in Pakistan</span>
-      </a>
-      <nav class="nav">
-        <a href="#useful-links">Resources</a>
-        <a href="#contact" class="btn-outline">Book</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <nav class="nav">
+            <a href="#" class="logo">🇵🇰 Jobz.pk</a>
+            <div>
+                <a href="https://www.jobz.pk/" style="margin-right: 1.5rem; color: #334155; text-decoration: none; font-weight: 500;">Home</a>
+                <a href="#categories" style="color: #334155; text-decoration: none; font-weight: 500;">Categories</a>
+            </div>
+        </nav>
+    </header>
 
-  <main>
     <section class="hero">
-      <div class="container">
-        <div class="hero-grid">
-          <div class="hero-content">
-            <h1>Find Jobs & Promote Opportunities Across Pakistan</h1>
-            <p class="lead">A curated hub for jobseekers and recruiters. Promote your job-related resources with clean dofollow links and reach thousands of readers.</p>
-            <div class="hero-cta">
-              <a class="btn" href="#useful-links">Explore Resources</a>
-              <a class="btn btn-ghost" href="#contact">Contact Us</a>
+        <h1>Discover Your Dream Job in Pakistan</h1>
+        <p>Jobz.pk is the #1 job portal connecting talented professionals with top opportunities across Pakistan and overseas.</p>
+        
+        <div class="search-bar">
+            <input type="text" placeholder="Search jobs, companies, skills...">
+            <button class="btn">Search</button>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <h2 class="section-title">Explore Job Categories</h2>
+        
+        <div class="grid">
+            <!-- Government Jobs -->
+            <div class="card">
+                <div class="card-header">🏛️</div>
+                <div class="card-content">
+                    <h3>Government Jobs</h3>
+                    <p>Latest federal &amp; provincial government vacancies, PPSC, FPSC, and more.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/government-jobs/" class="link" target="_blank" rel="dofollow">→ Government Jobs</a>
+                    </div>
+                </div>
             </div>
-            <ul class="kpis">
-              <li><strong>15</strong><span>Top Resources</span></li>
-              <li><strong>Fast</strong><span>Lightweight Page</span></li>
-              <li><strong>Dofollow</strong><span>Plain Links</span></li>
-            </ul>
-          </div>
-          <div class="hero-card">
-            <div class="card-inner">
-              <h4>Featured Slot — Leaderboard</h4>
-              <p>High-visibility banner for job postings and companies. Price: $100/month.</p>
-              <a class="btn" href="#contact">Book Now</a>
+            
+            <!-- Pakistan Army -->
+            <div class="card">
+                <div class="card-header">🪖</div>
+                <div class="card-content">
+                    <h3>Pakistan Army Vacancies</h3>
+                    <p>Join the Pakistan Army - Latest recruitment announcements and tests.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/pakistan-army-vacancies/" class="link" target="_blank" rel="dofollow">→ Army Jobs</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            
+            <!-- Private Jobs -->
+            <div class="card">
+                <div class="card-header">💼</div>
+                <div class="card-content">
+                    <h3>Private Sector Jobs</h3>
+                    <p>Opportunities in multinational companies, startups &amp; established firms.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/private-jobs/" class="link" target="_blank" rel="dofollow">→ Private Jobs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Test Results -->
+            <div class="card">
+                <div class="card-header">📋</div>
+                <div class="card-content">
+                    <h3>Test Results</h3>
+                    <p>Latest written test results, interview lists and merit lists.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/testresult/" class="link" target="_blank" rel="dofollow">→ View Results</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Overseas Jobs -->
+            <div class="card">
+                <div class="card-header">🌍</div>
+                <div class="card-content">
+                    <h3>Overseas Jobs</h3>
+                    <p>UAE, Dubai, UK, Saudi Arabia and other international opportunities.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/overseas-uae-dubai-uk-jobs/" class="link" target="_blank" rel="dofollow">→ Overseas Jobs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Freelancers -->
+            <div class="card">
+                <div class="card-header">💻</div>
+                <div class="card-content">
+                    <h3>Freelance Opportunities</h3>
+                    <p>Find freelance work and connect with clients.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/freelancers.php" class="link" target="_blank" rel="dofollow">→ Freelancers</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Top Companies -->
+            <div class="card">
+                <div class="card-header">🏢</div>
+                <div class="card-content">
+                    <h3>Top Companies</h3>
+                    <p>Leading employers in Pakistan hiring now.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/top-companies-in-pakistan/" class="link" target="_blank" rel="dofollow">→ Top Companies</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- IT Jobs -->
+            <div class="card">
+                <div class="card-header">💻</div>
+                <div class="card-content">
+                    <h3>IT &amp; Software Jobs</h3>
+                    <p>Software engineering, development, data science opportunities.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/it-employment/" class="link" target="_blank" rel="dofollow">→ IT Jobs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Medical -->
+            <div class="card">
+                <div class="card-header">🩺</div>
+                <div class="card-content">
+                    <h3>Medical &amp; Healthcare</h3>
+                    <p>Doctor, nurse, pharmacist and paramedical staff jobs.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/medical-employment/" class="link" target="_blank" rel="dofollow">→ Medical Jobs</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bank Jobs -->
+            <div class="card">
+                <div class="card-header">🏦</div>
+                <div class="card-content">
+                    <h3>Banking Jobs</h3>
+                    <p>Latest vacancies in commercial and Islamic banks.</p>
+                    <div class="links">
+                        <a href="https://www.jobz.pk/bank-employment/" class="link" target="_blank" rel="dofollow">→ Bank Jobs</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+        
+        <div style="margin-top: 3rem; text-align: center;">
+            <h3 style="margin-bottom: 1.5rem;">More Categories</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; max-width: 900px; margin: 0 auto;">
+                <a href="https://www.jobz.pk/data-entry-jobs/" class="link" target="_blank" rel="dofollow" style="min-width: 220px;">Data Entry Jobs</a>
+                <a href="https://www.jobz.pk/teaching-employment/" class="link" target="_blank" rel="dofollow" style="min-width: 220px;">Teaching Jobs</a>
+                <a href="https://www.jobz.pk/engineering-employment/" class="link" target="_blank" rel="dofollow" style="min-width: 220px;">Engineering Jobs</a>
+                <a href="https://www.jobz.pk/business-ideas/" class="link" target="_blank" rel="dofollow" style="min-width: 220px;">Business Ideas</a>
+            </div>
+        </div>
     </section>
 
-    <section class="section container" id="useful-links">
-      <h2 class="section-title">Useful Jobz.pk Links</h2>
-      <p class="section-sub">Curated links to popular job categories and resources on Jobz.pk — all links are plain anchors (dofollow by default).</p>
-
-      <div class="links-grid">
-        <a class="link-card" href="https://www.jobz.pk/" target="_blank" rel="noopener">
-          <div class="link-icon">🏠</div>
-          <div>
-            <h3>Jobz.pk — Home</h3>
-            <p>Latest jobs and site homepage.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/government-jobs/" target="_blank" rel="noopener">
-          <div class="link-icon">🏛️</div>
-          <div>
-            <h3>Government Jobs</h3>
-            <p>Public sector and government vacancies.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/pakistan-army-vacancies/" target="_blank" rel="noopener">
-          <div class="link-icon">🎖️</div>
-          <div>
-            <h3>Pakistan Army Vacancies</h3>
-            <p>Army recruitment and related openings.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/private-jobs/" target="_blank" rel="noopener">
-          <div class="link-icon">💼</div>
-          <div>
-            <h3>Private Jobs</h3>
-            <p>Private sector career opportunities.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/testresult/" target="_blank" rel="noopener">
-          <div class="link-icon">📝</div>
-          <div>
-            <h3>Test Results</h3>
-            <p>Check exam and test outcomes.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/overseas-uae-dubai-uk-jobs/" target="_blank" rel="noopener">
-          <div class="link-icon">✈️</div>
-          <div>
-            <h3>Overseas Jobs</h3>
-            <p>Opportunities in UAE, Dubai, UK and beyond.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/freelancers.php" target="_blank" rel="noopener">
-          <div class="link-icon">🧑‍💻</div>
-          <div>
-            <h3>Freelancers</h3>
-            <p>Remote & freelance job listings.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/top-companies-in-pakistan/" target="_blank" rel="noopener">
-          <div class="link-icon">🏢</div>
-          <div>
-            <h3>Top Companies</h3>
-            <p>Profiles of leading employers in Pakistan.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/it-employment/" target="_blank" rel="noopener">
-          <div class="link-icon">🖥️</div>
-          <div>
-            <h3>IT Employment</h3>
-            <p>Technology & development roles.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/medical-employment/" target="_blank" rel="noopener">
-          <div class="link-icon">⚕️</div>
-          <div>
-            <h3>Medical Employment</h3>
-            <p>Healthcare & medical job listings.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/bank-employment/" target="_blank" rel="noopener">
-          <div class="link-icon">🏦</div>
-          <div>
-            <h3>Bank Employment</h3>
-            <p>Banking and finance careers.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/data-entry-jobs/" target="_blank" rel="noopener">
-          <div class="link-icon">⌨️</div>
-          <div>
-            <h3>Data Entry Jobs</h3>
-            <p>Entry-level and remote data tasks.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/teaching-employment/" target="_blank" rel="noopener">
-          <div class="link-icon">📚</div>
-          <div>
-            <h3>Teaching Employment</h3>
-            <p>Academic & teaching positions.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/engineering-employment/" target="_blank" rel="noopener">
-          <div class="link-icon">🛠️</div>
-          <div>
-            <h3>Engineering Employment</h3>
-            <p>Engineering and technical roles.</p>
-          </div>
-        </a>
-
-        <a class="link-card" href="https://www.jobz.pk/business-ideas/" target="_blank" rel="noopener">
-          <div class="link-icon">💡</div>
-          <div>
-            <h3>Business Ideas</h3>
-            <p>Guides and ideas for entrepreneurship.</p>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <section class="section container" id="contact">
-      <h2 class="section-title">Contact / Book an Ad</h2>
-      <p class="section-sub">Use the form below or email <a href="mailto:advertise@example.com">advertise@example.com</a>. Replace the Formspree action with your own form endpoint.</p>
-
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="contact-form">
-        <div class="form-grid">
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="_replyto" required />
-          </label>
-          <label class="full">
-            Selected Slot
-            <select name="slot">
-              <option>Leaderboard (728x90)</option>
-              <option>Sidebar (300x250)</option>
-              <option>Sponsored Post</option>
-            </select>
-          </label>
-          <label class="full">
-            Message
-            <textarea name="message" rows="5"></textarea>
-          </label>
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h3 style="color: white; margin-bottom: 1rem;">🇵🇰 Jobz.pk</h3>
+                <p>The most trusted job platform in Pakistan since 2008.</p>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">Quick Links</h4>
+                <a href="https://www.jobz.pk/" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;" target="_blank" rel="dofollow">Home</a>
+                <a href="https://www.jobz.pk/government-jobs/" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;" target="_blank" rel="dofollow">Government Jobs</a>
+                <a href="https://www.jobz.pk/private-jobs/" style="color: #cbd5e1; text-decoration: none; display: block; margin-bottom: 0.5rem;" target="_blank" rel="dofollow">Private Jobs</a>
+            </div>
+            <div>
+                <h4 style="color: white; margin-bottom: 1rem;">Resources</h4>
+                <p>Daily job alerts • Resume builder • Interview tips</p>
+            </div>
         </div>
-        <div class="form-actions">
-          <button type="submit" class="btn">Send Booking Request</button>
-          <a class="btn btn-ghost" href="mailto:advertise@example.com">Email Us</a>
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #334155;">
+            <p>&copy; 2026 Jobz.pk Directory. All links point to official jobz.pk pages with <strong>dofollow</strong> attributes for SEO value.</p>
         </div>
-      </form>
-    </section>
+    </footer>
 
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Jobs in Pakistan</strong>
-        <p class="muted">Curated job resources & advertising information.</p>
-      </div>
-      <nav class="footer-nav">
-        <a href="#useful-links">Resources</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </footer>
+    <script>
+        // Simple search functionality
+        document.querySelector('.btn').addEventListener('click', () => {
+            const query = document.querySelector('input').value.trim();
+            if (query) {
+                alert(`Searching for: ${query} on Jobz.pk... (Redirecting to main portal)`);
+                window.open('https://www.jobz.pk/', '_blank');
+            }
+        });
+    </script>
 </body>
 </html>
